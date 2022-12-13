@@ -5,7 +5,9 @@
     "name": "WritingManager",
     "version": "1.0",
     "homepage_url": "https://github.com/kamiada/PlugIn_WritingManager",
-
+    "background": {
+        "scripts": ["popup/main.js"]
+      },
     "permissions": [
       "activeTab"
     ],
