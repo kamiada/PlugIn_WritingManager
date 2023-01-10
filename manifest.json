@@ -6,7 +6,7 @@
   "homepage_url": "https://github.com/kamiada/PlugIn_WritingManager",
   "background": {
     "scripts": [
-      "jquery-3.4.1.min.js",
+      "popup/jquery-3.6.3.min.js",
       "popup/main.js"
     ]
   },
@@ -14,7 +14,6 @@
     "activeTab",
     "storage"
   ],
-  "content_security_policy": "script-src 'self' https://ajax.googleapis.com/ajax/libs/jquery/3.6.1/jquery.min.js; object-src 'self'",
   "browser_action": {
     "default_icon": "icons/softIcon.png",
     "default_title": "Writing Manager",
