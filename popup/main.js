@@ -10,7 +10,8 @@ function save() {
   console.log("works");
 }
 function hideSection() {
-  if($("#first_section_no_projects") != null) {
-    $("#first_section_no_projects").hide();
+  if($("#section_no_projects") != null) {
+    $("#section_no_projects").hide("slow","swing");
+    $("#section_newProject").show("slow","swing");
   }
 }
