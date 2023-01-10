@@ -1,0 +1,30 @@
+:root {
+    --background: #355C7D;
+    --pinkish: #C06C84;
+}
+
+html {
+    width: 340px;
+    height: 340px;
+    background-color: var(--background);
+}
+
+body {
+    position: absolute;
+    overflow: hidden;
+}
+
+::-webkit-scrollbar {
+    display: none;
+}
+
+.btn_addProject {
+    background: transparent;
+    font-weight: bold;
+    border: transparent;
+    color: var(--pinkish);
+    text-align: center;
+    display: block;
+    font-size: 100px;
+    margin: 0 auto;
+}
