@@ -9,13 +9,13 @@
         "scripts": ["popup/main.js"]
       },
     "permissions": [
-      "activeTab"
+      "activeTab",
+      "storage"
     ],
   
     "browser_action": {
       "default_icon": "icons/softIcon.png",
       "default_title": "Writing Manager",
       "default_popup": "popup/main.html"
-    }
-  
-  }
+    }  
+}
