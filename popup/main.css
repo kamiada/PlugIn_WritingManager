@@ -1,5 +1,5 @@
 @import url('https://fonts.googleapis.com/css2?family=Indie+Flower&display=swap');
-
+@import url('https://fonts.googleapis.com/css2?family=Merriweather:wght@300&display=swap');
 :root {
     --background: #355C7D;
     --pinkish: #C06C84;
@@ -45,8 +45,34 @@ body {
 
 #section_newProject {
     font-family: 'Indie Flower', cursive;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    height: 330px;
+}
+
+#saveButton {
+    font-family: 'Indie Flower', cursive;
+    width: 70px;
+    height: 30px;
+    border:none;
+    border-radius: 5px;
+    font-size: large;
+    background-color: var(--pinkish);
+    border-style: solid;
+    margin-top: 20%;
+    margin-left: 40%;
+    cursor: pointer;
+}
+
+label {
+    font-size: 20px;
+    padding: 5px;
 }
 
 input {
     border-radius: 15px;
+    width: 270px;
+    height: 25px;
+    font-family: 'Merriweather', serif;
 }
