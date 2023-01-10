@@ -23,15 +23,15 @@ body {
     justify-content: center;
     text-align: center;
     width: auto;
-
 }
-.btn_addProject {
+.link_addProject {
     background: transparent;
     font-weight: bold;
     border: transparent;
     color: var(--pinkish);
     font-size: 180px;
     padding-top: 10px;
+    text-decoration: none;
 }
 
 #title-content {
@@ -41,4 +41,12 @@ body {
     font-size: 20px;
     padding: 0;
     margin: 0;
+}
+
+#addProject {
+    font-family: 'Indie Flower', cursive;
+}
+
+input {
+    border-radius: 15px;
 }
