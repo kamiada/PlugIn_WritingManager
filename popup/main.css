@@ -1,5 +1,6 @@
 @import url('https://fonts.googleapis.com/css2?family=Indie+Flower&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Merriweather:wght@300&display=swap');
+
 :root {
     --background: #355C7D;
     --pinkish: #C06C84;
@@ -18,12 +19,14 @@ body {
 ::-webkit-scrollbar {
     display: none;
 }
+
 #popup-content {
     display: flex;
     justify-content: center;
     text-align: center;
     width: auto;
 }
+
 .link_addProject {
     background: transparent;
     font-weight: bold;
@@ -55,7 +58,7 @@ body {
     font-family: 'Indie Flower', cursive;
     width: 70px;
     height: 30px;
-    border:none;
+    border: none;
     border-radius: 5px;
     font-size: large;
     background-color: var(--pinkish);
@@ -75,4 +78,18 @@ input {
     width: 270px;
     height: 25px;
     font-family: 'Merriweather', serif;
+}
+
+#section_allProjects {
+    font-family: 'Indie Flower', cursive; 
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    height: 330px;
+}
+
+#myBar {
+    width: 1%;
+    height: 30px;
+    background-color: #04AA6D;
 }
