@@ -2,14 +2,15 @@
 @import url('https://fonts.googleapis.com/css2?family=Merriweather:wght@300&display=swap');
 
 :root {
-    --background: #355C7D;
-    --pinkish: #C06C84;
+    --metallic_blue: #355C7D;
+    --turkish_rose: #C06C84;
+    --dusty_pick: #7d355d;
 }
 
 html {
     width: 340px;
     height: 340px;
-    background-color: var(--background);
+    background-color: var(--metallic_blue);
 }
 
 body {
@@ -31,7 +32,7 @@ body {
     background: transparent;
     font-weight: bold;
     border: transparent;
-    color: var(--pinkish);
+    color: var(--turkish_rose);
     font-size: 180px;
     padding-top: 10px;
     text-decoration: none;
@@ -61,7 +62,7 @@ body {
     border: none;
     border-radius: 5px;
     font-size: large;
-    background-color: var(--pinkish);
+    background-color: var(--turkish_rose);
     border-style: solid;
     margin-top: 20%;
     margin-left: 40%;

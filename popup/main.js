@@ -21,11 +21,35 @@ function hideSecondSection() {
   }
 }
 
+function getValues() {
+  let title2 = $("title").val();
+  console.log(title2);
+  if($("#title").val() != null || $("#title").val() != '') {
+    let title = $("#title").val();
+    chrome.storage.local.set({
+      'title' : title
+    });
+    check();
+  }
+}
+
 function saveProject() {
-  let getTitle = document.getElementById("title").value;
-  let getGoal = document.getElementById("goal").value;
   hideSecondSection();
-  chrome.storage.local.set({
-    'title': getTitle
-  });
+  // chrome.storage.local.set({
+  //   'title': getTitle
+  // });
+  // chrome.storage.local.set({ key: getTitle }).then(() => {
+  //   console.log("Value is set to " + getTitle);
+  // });
+  
+  getValues();
+}
+
+function check() {
+    var channels = "";
+    chrome.storage.local.get('title', function (result) {
+        channels = result.channels;
+        alert(result.channels);
+        $("#channels").val(channels);
+    });
 }
