@@ -6,6 +6,7 @@
     <script type="text/javascript" src="main.js"></script>
   </head>
   <body>
+    <!-- No saved projects initial step -->
     <section id="section_no_projects" class="empty_section">
       <div id="popup-content">
         <a id="addProject" class="link_addProject" href="#addProject"> + </a>
@@ -14,16 +15,18 @@
         <h2>Add a project to track</h2>
       </div>
     </section>
-    <section id="section_newProject" style="display: none;">
+    <!-- No projects saved, user sees inputs to create new project -->
+    <section id="section_newProject" style="display: none">
       <label>title</label>
       <input type="text" id="title" name="title" /><br /><br />
       <label>goal</label>
-      <input type="number" id="goal" name="goal" />      
+      <input type="number" id="goal" name="goal" />
       <button id="saveButton" type="button">Done</button>
     </section>
-
-    <section id="section_allProjects" style="display: none;">
-      <label>title <p id="title"/></p>
+    <!-- All saved projects -->
+    <section id="section_allProjects" style="display: none">
+      <label>title</label>
+      <p id="output" />
       <div id="progressBar">
         <div id="myBar"></div>
       </div>
