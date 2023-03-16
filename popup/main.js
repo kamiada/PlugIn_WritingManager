@@ -3,8 +3,16 @@ window.onload=function(){
   const saveButton = document.getElementById("saveButton");
   const addProjectBtn = document.getElementById("addProject");
 
+  let projectTitle = document.getElementById("title");
+
   saveButton.addEventListener("click", saveProject);
   addProjectBtn.addEventListener("click", hideFirstSection);
+
+  browser.storage.local.get('title', function(result) {
+    if (result.title) {
+      projectTitle.value = result.title;
+    }
+  })
 }
 
 function hideFirstSection() {
@@ -29,20 +37,13 @@ function getValues() {
     chrome.storage.local.set({
       'title' : title
     });
-    check();
+    // check();
   }
 }
 
 function saveProject() {
   getValues();
-
   hideSecondSection();
-  // chrome.storage.local.set({
-  //   'title': getTitle
-  // });
-  // chrome.storage.local.set({ key: getTitle }).then(() => {
-  //   console.log("Value is set to " + getTitle);
-  // });
 }
 
 function check() {
@@ -53,4 +54,13 @@ function check() {
         alert(result.title);
         $("#title").val(res);
     });
+}
+
+function updateProject() 
+ {
+  let data = {
+    text: input1.value,
+    number: input2.value
+  };
+  browser.storage.local.set(data);
 }
