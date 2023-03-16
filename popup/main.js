@@ -34,6 +34,8 @@ function getValues() {
 }
 
 function saveProject() {
+  getValues();
+
   hideSecondSection();
   // chrome.storage.local.set({
   //   'title': getTitle
@@ -41,15 +43,14 @@ function saveProject() {
   // chrome.storage.local.set({ key: getTitle }).then(() => {
   //   console.log("Value is set to " + getTitle);
   // });
-  
-  getValues();
 }
 
 function check() {
-    var channels = "";
+    var res = "";
     chrome.storage.local.get('title', function (result) {
-        channels = result.channels;
-        alert(result.channels);
-        $("#channels").val(channels);
+      console.log(result);
+        res = result.title;
+        alert(result.title);
+        $("#title").val(res);
     });
 }
