@@ -21,10 +21,16 @@ function hideSecondSection() {
 }
 
 function saveProject() {
-  if ($("#title").val() != null || $("#title").val() != "") {
+  if (
+    $("#title").val() != null ||
+    ($("#title").val() != "" && $("#goal").val() != null) ||
+    $("#goal").val() != ""
+  ) {
     let title = $("#title").val();
+    let goal = $("#goal").val();
     chrome.storage.local.set({
       title: title,
+      goal: goal,
     });
   }
   hideSecondSection();
@@ -35,6 +41,9 @@ function updateListOfProjects() {
   const sectionWithProjects = document.getElementById("section_allProjects");
   chrome.storage.local.get(["title"], function (result) {
     document.getElementById("output").textContent = result.title;
+  });
+  chrome.storage.local.get(["goal"], function (result) {
+    document.getElementById("myBar").textContent = result.goal;
   });
 }
 
