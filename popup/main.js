@@ -29,17 +29,6 @@ function saveProject() {
   }
   hideSecondSection();
   updateListOfProjects();
-  // check();
-}
-
-function check() {
-  var res = "";
-  chrome.storage.local.get("title", function (result) {
-    console.log(result);
-    res = result.title;
-    alert(result.title);
-    $("#title").val(res);
-  });
 }
 
 function updateListOfProjects() {
