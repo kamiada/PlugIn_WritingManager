@@ -1,5 +1,3 @@
-let output = document.getElementById("output");
-
 window.onload = function () {
   const saveButton = document.getElementById("saveButton");
   const addProjectBtn = document.getElementById("addProject");
@@ -29,9 +27,9 @@ function saveProject() {
       title: title,
     });
   }
-  // check();
-  updateListOfProjects();
   hideSecondSection();
+  updateListOfProjects();
+  // check();
 }
 
 function check() {
@@ -46,12 +44,8 @@ function check() {
 
 function updateListOfProjects() {
   const sectionWithProjects = document.getElementById("section_allProjects");
-  chrome.storage.local.get("title", function (result) {
-    res = result.title;
-    if (res!= null) {
-      output.textContent = $("#title").val(res);
-      output.textContent = res;
-    }
+  chrome.storage.local.get(["title"], function (result) {
+    document.getElementById("output").textContent = result.title;
   });
 }
 
