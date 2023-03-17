@@ -20,6 +20,13 @@ function hideSecondSection() {
   }
 }
 
+function hideUpdateProject() {
+  if ($("#section_update_project") != null) {
+    $("#section_update_project").hide("slow", "swing");
+    $("#section_allProjects").show("slow", "swing");
+  }
+}
+
 function saveProject() {
   if (
     $("#title").val() != null ||
