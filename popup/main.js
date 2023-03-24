@@ -4,7 +4,13 @@ window.onload = function () {
 
   saveButton.addEventListener("click", saveProject);
   addProjectBtn.addEventListener("click", hideFirstSection);
+
+  checkStorage();
 };
+
+function checkStorage() {
+  
+}
 
 function hideFirstSection() {
   if ($("#section_no_projects") != null) {
@@ -52,12 +58,4 @@ function updateListOfProjects() {
   chrome.storage.local.get(["goal"], function (result) {
     document.getElementById("myBar").textContent = result.goal;
   });
-}
-
-function updateProject() {
-  let data = {
-    text: input1.value,
-    number: input2.value,
-  };
-  browser.storage.local.set(data);
 }
