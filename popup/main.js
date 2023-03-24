@@ -1,11 +1,22 @@
+if (typeof chrome !== "undefined" && typeof chrome.runtime !== "undefined") {
+  chrome.runtime.onInstalled.addListener(checkStorage);
+  chrome.runtime.onStartup.addListener(checkStorage);
+} else if (
+  typeof browser !== "undefined" &&
+  typeof browser.runtime !== "undefined"
+) {
+  browser.runtime.onInstalled.addListener(checkStorage);
+  browser.runtime.onStartup.addListener(checkStorage);
+} else {
+  console.error("Local storage is not supported");
+}
+
 window.onload = function () {
   const saveButton = document.getElementById("saveButton");
   const addProjectBtn = document.getElementById("addProject");
 
   saveButton.addEventListener("click", saveProject);
   addProjectBtn.addEventListener("click", hideFirstSection);
-
-  checkStorage();
 };
 
 function checkStorage() {
