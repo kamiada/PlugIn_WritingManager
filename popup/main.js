@@ -1,6 +1,8 @@
 if (typeof chrome !== "undefined" && typeof chrome.runtime !== "undefined") {
   chrome.runtime.onInstalled.addListener(checkStorage);
   chrome.runtime.onStartup.addListener(checkStorage);
+  checkStorage();
+  console.log('here');
 } else if (
   typeof browser !== "undefined" &&
   typeof browser.runtime !== "undefined"
@@ -20,14 +22,17 @@ window.onload = function () {
 };
 
 function checkStorage() {
+  console.log('here 2');
   if (typeof chrome !== "undefined" && typeof chrome.storage !== "undefined") {
     chrome.storage.local.get(["title", "goal"], function (result) {
       if (result.title && result.goal) {
         // Load the "all projects" section
         $("#section_no_projects").show("slow", "swing");
+        console.log('here 3');
       } else {
         // Load the "add project" section
         $("#section_allProjects").show("slow", "swing");
+        console.log('here 4');
       }
     });
   } else {
