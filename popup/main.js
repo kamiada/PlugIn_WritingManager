@@ -13,10 +13,16 @@ function checkStorage() {
     chrome.storage.local.get(["title", "goal"], function (result) {
       if (result.title && result.goal) {
         // Load the "all projects" section
+        $("#section_no_projects").show("slow", "swing");
       } else {
         // Load the "add project" section
+        $("#section_allProjects").show("slow", "swing");
       }
     });
+  } else {
+    console.error(
+      "Local storage is not supported, please enable local storage in your browser if you want to use this extensions"
+    );
   }
 }
 
