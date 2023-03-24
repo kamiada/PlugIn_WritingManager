@@ -9,7 +9,15 @@ window.onload = function () {
 };
 
 function checkStorage() {
-  
+  if (typeof chrome !== "undefined" && typeof chrome.storage !== "undefined") {
+    chrome.storage.local.get(["title", "goal"], function (result) {
+      if (result.title && result.goal) {
+        // Load the "all projects" section
+      } else {
+        // Load the "add project" section
+      }
+    });
+  }
 }
 
 function hideFirstSection() {
